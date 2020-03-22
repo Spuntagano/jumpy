@@ -17,12 +17,12 @@ export class MainMenuScene extends Phaser.Scene {
   public create() {
     this.add.text(100, 50, 'This is a sample main menu. Click the "Start" button below to run your game.', { fill: '#FFFFFF' }).setFontSize(24);
 
-    new MenuButton(this, 100, 150, 'Start Game', () => {
+    const startGameButton = new MenuButton(this, 100, 150, 'Start Game', () => {
       this.scene.start('Game');
     });
 
-    new MenuButton(this, 100, 250, 'Settings', () => console.log('settings button clicked'));
+    const settingsButton =  new MenuButton(this, 100, 250, 'Settings', () => console.log('settings button clicked'));
 
-    new MenuButton(this, 100, 350, 'Help', () => console.log('help button clicked'));
+    const helpButton = new MenuButton(this, 100, 350, 'Help', () => console.log('help button clicked'));
   }
 }

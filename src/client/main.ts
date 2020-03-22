@@ -2,23 +2,19 @@ import * as Phaser from 'phaser';
 import Scenes from './scenes';
 
 const gameConfig: Phaser.Types.Core.GameConfig = {
-  title: 'Sample',
+  title: 'Jumpy',
 
   type: Phaser.AUTO,
 
+  width: window.innerWidth,
+  height: window.innerHeight,
+
   scale: {
-    width: window.innerWidth,
-    height: window.innerHeight,
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
   },
 
   scene: Scenes,
-
-  physics: {
-    default: 'arcade',
-    arcade: {
-      debug: true,
-    },
-  },
 
   parent: 'game',
   backgroundColor: '#000000',

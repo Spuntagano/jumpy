@@ -1,26 +1,35 @@
 {
-  "name": "sample-phaser3-typescript-project",
+  "name": "jumpy",
   "version": "1.0.0",
-  "description": "A sample project using Phaser 3 and TypeScript",
+  "description": "Jumping game",
   "main": "src/main.ts",
   "author": "Joe Bustamante",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server"
+    "start": "npm-run-all --parallel webpack nodemon",
+    "webpack": "webpack --watch --mode development",
+    "nodemon": "nodemon server.js",
+    "build": "webpack"
   },
   "dependencies": {
+    "canvas": "^2.6.1",
     "phaser": "^3.20.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
+    "datauri": "^1.1.0",
+    "express": "^4.16.4",
+    "jsdom": "^13.0.0",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "socket.io": "^2.1.1",
     "ts-loader": "^5.3.3",
     "tslint": "^5.12.1",
     "typescript": "^3.7.2",
     "typescript-tslint-plugin": "^0.3.1",
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.1.14"
   }
 }
